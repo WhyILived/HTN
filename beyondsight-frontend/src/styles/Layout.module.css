@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #065f46;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 2rem;
+  min-height: calc(100vh - 64px); /* subtract navbar height */
+}
