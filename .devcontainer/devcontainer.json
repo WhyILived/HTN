@@ -1,0 +1,23 @@
+{
+  "name": "ROS1 + YOLO Dev Container",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--net=host",
+    "--privileged",
+    "-v", "/dev/bus/usb:/dev/bus/usb",
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
+    "-e", "DISPLAY=$DISPLAY",
+    "-v", "/home/sy/Desktop/NotLDrive/HTN:/app:cached",
+    "-v", "/home/sy/.ssh:/root/.ssh"
+
+  ],
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
