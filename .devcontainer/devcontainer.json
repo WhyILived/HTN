@@ -8,7 +8,9 @@
     "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
     "-e", "DISPLAY=$DISPLAY",
     "-v", "/home/sy/Desktop/NotLDrive/HTN:/app:cached",
-    "-v", "/home/sy/.ssh:/root/.ssh"
+    "-v", "/home/sy/.ssh:/root/.ssh",
+    "--env", "DISPLAY=${localEnv:DISPLAY}",
+    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix"
 
   ],
   "workspaceFolder": "/app",
