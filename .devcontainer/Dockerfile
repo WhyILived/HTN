@@ -43,7 +43,8 @@ RUN python3 -m pip install --upgrade pip && \
       packaging==23.1 \
       pillow==9.5.0 \
       python-dateutil==2.8.2 \
-      six==1.16.0
+      six==1.16.0 \
+      mediapipe==0.10.0
 
 # Workspace
 RUN mkdir -p /root/catkin_ws/src
