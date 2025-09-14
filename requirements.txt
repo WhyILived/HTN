@@ -1,0 +1,35 @@
+# Python dependencies extracted from .devcontainer/Dockerfile
+# Updated with Windows-compatible versions to avoid build issues
+absl-py>=2.0.0
+attrs>=23.0.0
+cffi>=1.15.0
+contourpy>=1.0.0
+cycler>=0.11.0
+flatbuffers>=22.0.0
+fonttools>=4.39.0
+jax>=0.4.0
+jaxlib>=0.4.0
+kiwisolver>=1.4.0
+matplotlib>=3.7.0
+ml_dtypes>=0.1.0
+numpy>=1.24.0
+opencv-contrib-python>=4.8.0
+opencv-python>=4.8.0
+opt_einsum>=3.3.0
+packaging>=23.0
+pillow>=10.0.0
+protobuf>=3.20.0,<4.0.0
+pycparser>=2.21
+pyparsing>=3.0.0
+python-dateutil>=2.8.0
+scipy>=1.10.0
+setuptools>=65.0.0
+six>=1.16.0
+sounddevice>=0.4.0
+mediapipe>=0.10.0
+ultralytics
+torch
+torchvision
+elevenlabs
+pynput
+python-dotenv
