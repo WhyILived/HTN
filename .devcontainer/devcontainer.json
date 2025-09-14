@@ -1,25 +1,50 @@
 {
-  "name": "ROS1 + YOLO Dev Container",
-  "dockerFile": "Dockerfile",
+  "name": "ROS Noetic + RTAB-Map (CPU)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
   "runArgs": [
-    "--net=host",
+    "--init",
     "--privileged",
-    "-v", "/dev/bus/usb:/dev/bus/usb",
-    "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
-    "-e", "DISPLAY=$DISPLAY",
-    "-v", "/home/sy/Desktop/NotLDrive/HTN:/app:cached",
-    "-v", "/home/sy/.ssh:/root/.ssh",
-    "--env", "DISPLAY=${localEnv:DISPLAY}",
-    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix"
-
+    "--device=/dev/bus/usb:/dev/bus/usb",
+    "--net=host",
+    "-e", "DISPLAY=${env:DISPLAY}",
+    "-e", "WAYLAND_DISPLAY=${env:WAYLAND_DISPLAY}",
+    "-e", "XDG_RUNTIME_DIR=${env:XDG_RUNTIME_DIR}"
   ],
-  "workspaceFolder": "/app",
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  "remoteUser": "root",
+  "overrideCommand": true,
+  "workspaceFolder": "/root/catkin_ws",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/root/catkin_ws/src/your_project,type=bind",
+  "features": {},
+  "containerEnv": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PIP_NO_CACHE_DIR": "1"
+  },
+  "postCreateCommand": "bash -lc 'source /opt/ros/noetic/setup.bash && rosdep update || true && cd /root/catkin_ws && catkin_make || true'",
+  "postStartCommand": "bash -lc 'echo \"source /opt/ros/noetic/setup.bash\" >> ~/.bashrc && echo \"source /root/catkin_ws/devel/setup.bash\" >> ~/.bashrc'",
   "customizations": {
     "vscode": {
       "extensions": [
+        "ms-vscode.cpptools",
+        "twxs.cmake",
         "ms-python.python",
-        "ms-vscode.cpptools"
-      ]
+        "ms-python.vscode-pylance",
+        "ms-iot.vscode-ros",
+        "ms-azuretools.vscode-docker",
+        "njpwerner.autodocstring",
+        "xaver.clang-format"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+        "editor.formatOnSave": true,
+        "python.analysis.autoImportCompletions": true
+      }
     }
   }
 }
