@@ -1,3 +1,15 @@
+Looks better @: https://devpost.com/software/beyondsight-589mh7
+
+🛠️ How we built it
+From the moment we set foot in E7, we knew we wanted to tackle this challenge head-on. On Friday night, we secured an Xbox 360 depth camera off Facebook Marketplace, traveling across town on the 301 ION to pick it up. Meanwhile, our teammate Sy, a computer engineering student, brought a treasure trove of haptic motors to the table.
+
+The hardware build began with 3D-printing the gauntlet to house the Braille keypad and motors, while wiring up the vest for navigation feedback. Simultaneously, we coded the AI communication pipeline—tying together:
+
+Whisper for speech recognition
+Gemini for natural language expansion
+ElevenLabs for speech synthesis
+Piece by piece, the hardware and software came together into a system where every component—from motors to models—worked in perfect harmony.
+
 ✨ What it does
 BeyondSight is a full wearable ecosystem designed to empower DeafBlind individuals with independence, communication, and safety.
 
@@ -27,16 +39,6 @@ Our inspiration comes directly from someone close to us: our friend Damian—aff
 But we've also witnessed firsthand the struggles he faces: navigating unfamiliar spaces, trying to communicate in real-time, and depending heavily on others for basic independence. We wanted to build something that could transform those struggles into opportunities—not just for Damian, but for DeafBlind individuals around the world.
 
 BeyondSight is our way of showing that accessibility isn't a luxury—it's a necessity, and with technology, it can become reality.
-
-🛠️ How we built it
-From the moment we set foot in E7, we knew we wanted to tackle this challenge head-on. On Friday night, we secured an Xbox 360 depth camera off Facebook Marketplace, traveling across town on the 301 ION to pick it up. Meanwhile, our teammate Sy, a computer engineering student, brought a treasure trove of haptic motors to the table.
-
-The hardware build began with 3D-printing the gauntlet to house the Braille keypad and motors, while wiring up the vest for navigation feedback. Simultaneously, we coded the AI communication pipeline—tying together:
-
-Whisper for speech recognition
-Gemini for natural language expansion
-ElevenLabs for speech synthesis
-Piece by piece, the hardware and software came together into a system where every component—from motors to models—worked in perfect harmony.
 
 ⚡ Challenges we ran into
 Our biggest hurdle came from the Xbox camera itself. Because it's nearly two decades old, support is scarce. Our teammate Noah had to wrestle with:
